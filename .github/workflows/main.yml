@@ -12,3 +12,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Tests
+        run: npm run test -- --ci --runInBand
+
+      - name: e2e
+        run: npm run e2e -- --headless
+
+      - name: Build
+        run: npm run ng -- build github-actions --prod
