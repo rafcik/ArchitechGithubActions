@@ -25,7 +25,9 @@
               "apps/github-actions/src/favicon.ico",
               "apps/github-actions/src/assets"
             ],
-            "styles": ["apps/github-actions/src/styles.scss"],
+            "styles": [
+              "apps/github-actions/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +85,10 @@
               "apps/github-actions/tsconfig.app.json",
               "apps/github-actions/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/github-actions/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/github-actions/**"
+            ]
           }
         },
         "test": {
@@ -94,6 +99,10 @@
             "passWithNoTests": true,
             "setupFile": "apps/github-actions/src/test-setup.ts"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     },
@@ -118,8 +127,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/github-actions-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/github-actions-e2e/**"]
+            "tsConfig": [
+              "apps/github-actions-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/github-actions-e2e/**"
+            ]
           }
         }
       }
